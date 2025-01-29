@@ -48,8 +48,6 @@ export default function NavBar() {
           <Box sx={{ display: { xs: "block", md: "none" } }}>
             <IconButton
               size="large"
-              edge="start"
-              aria-label="menu"
               sx={{ mr: 2 }}
               onClick={handleClick}
             >
@@ -60,9 +58,6 @@ export default function NavBar() {
               anchorEl={anchorEl}
               open={open}
               onClose={handleClose}
-              MenuListProps={{
-                "aria-labelledby": "basic-button",
-              }}
             >
               <Box
                 sx={{
@@ -71,6 +66,7 @@ export default function NavBar() {
                   gap: 3,
                   textAlign: "start",
                   padding: "10px",
+                  background: "#aaa"
                 }}
               >
                 <Link href="/">
@@ -83,10 +79,21 @@ export default function NavBar() {
                     Contacto
                   </Button>
                 </Link>
+                <Link href="/instalaciones">
+                  <Button sx={{ color: "black" }} onClick={handleClose}>
+                    Instalaciones
+                  </Button>
+                </Link>
               </Box>
             </Menu>
           </Box>
-          <Box sx={{ display: { xs: "none", md: "block" } }}>
+          <Box
+            sx={{
+              display: { xs: "none", md: "block" },
+              width: "33%",
+              justifyContent: "start",
+            }}
+          >
             <Box sx={{ display: "flex", gap: 4 }}>
               <Link className="custom-link" href="/">
                 Inicio
@@ -109,7 +116,13 @@ export default function NavBar() {
             </Typography>
           </Box>
 
-          <Box sx={{ display: { xs: "none", sm: "flex" } }}>
+          <Box
+            sx={{
+              display: { xs: "none", sm: "flex" },
+              width: "33%",
+              justifyContent: "end",
+            }}
+          >
             <Socials />
           </Box>
         </Toolbar>

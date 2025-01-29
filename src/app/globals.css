@@ -9,6 +9,8 @@ body {
     position: relative;
     min-height: 100vh;
     padding-bottom: 9em;
+    background-color: #121212;
+    color: #ffffff;
 }
 
 body.light {

@@ -24,11 +24,6 @@ export default function Socials() {
             <LinkedInIcon className="custom-link" />
           </IconButton>
         </Link>
-        <Link href={'#'}>
-          <IconButton className="custom-link" onClick={toggleTheme}>
-            {themeChange == "dark" ? <WbSunnyIcon /> : <NightsStayIcon />}
-          </IconButton>
-        </Link>
       </Box>
     </div>
   );

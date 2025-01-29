@@ -9,7 +9,7 @@ import { Box, createTheme, ThemeProvider } from "@mui/material";
 export const contextGeneral = createContext();
 
 export default function RootLayout({ children }) {
-  const [themeChange, setThemeChenge] = useState("light");
+  const [themeChange, setThemeChenge] = useState("dark");
 
   const theme = createTheme({
     palette: {
@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
         <body>
           <ThemeProvider theme={theme}>
             <NavBar />
-            <Box sx={{ margin: 10 }}>
+            <Box sx={{ mt: 2 }}>
               <main>{children}</main>
             </Box>
             <Footer />
